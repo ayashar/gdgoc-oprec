@@ -1,7 +1,18 @@
 "use client";
 import Link from "next/link";
 import * as React from "react";
-import { Menu, X, Search, ShoppingCart, Heart, User } from "lucide-react";
+import {
+  Menu,
+  X,
+  Search,
+  ShoppingCart,
+  Heart,
+  User,
+  Phone,
+  Mail,
+  Instagram,
+  Youtube,
+} from "lucide-react";
 import { usePathname } from "next/dist/client/components/navigation";
 
 const NAVBAR_ITEMS = [
@@ -91,7 +102,30 @@ const DesktopNavbar = () => {
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
       />
-      <nav className="flex bg-white justify-center w-full fixed z-50">
+      <nav className="flex flex-col bg-white justify-center w-full fixed z-50">
+        <div className="py-5 hidden md:flex flex-row bg-primary-green text-white text-sm items-center justify-center gap-15">
+          <span className="flex flex-row gap-1">
+            <Phone />
+            (225) 555-0118
+          </span>
+          <span className="flex flex-row gap-1">
+            <Mail />
+            michelle.rivera@example.com
+          </span>
+          <span className="font-bold">Follow Us and get a chance to win 80% off</span>
+          <span className="flex flex-row gap-1">
+            Follow Us:{" "}
+            <Link href="/https://www.instagram.com/gdgoc.ugm" target="_blank">
+              <Instagram />
+            </Link>{" "}
+            <Link
+              href="/https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
+              target="_blank"
+            >
+              <Youtube />
+            </Link>
+          </span>
+        </div>
         <div className="px-14 py-6 hidden md:flex w-full max-w-7xl items-center justify-between">
           <Link href="/home" className="text-2xl text-text-primary font-bold">
             Bookstar
