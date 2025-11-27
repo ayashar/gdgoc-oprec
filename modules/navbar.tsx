@@ -48,14 +48,14 @@ const SearchModal = ({
 
   return (
     <div
-      className="fixed inset-0 z-10 flex items-start justify-center pt-24 px-4"
+      className="fixed inset-0 z-10 flex items-start justify-center pt-24 px-4 z-20"
       onClick={onClose}
     >
       <div
         className="bg-white rounded-lg shadow-2xl w-full max-w-2xl animate-in fade-in slide-in-from-top-4 duration-300"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-6">
+        <div className="p-6 z-20">
           <div className="flex items-center gap-2">
             <Search className="h-5 w-5 text-gray-400" />
             <input
@@ -102,7 +102,7 @@ const DesktopNavbar = () => {
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
       />
-      <nav className="flex flex-col bg-white justify-center w-full fixed z-50">
+      <nav className="flex flex-col bg-white justify-center w-full fixed z-10">
         <div className="py-5 hidden md:flex flex-row bg-primary-green text-white text-sm items-center justify-center gap-15">
           <span className="flex flex-row gap-1">
             <Phone />
