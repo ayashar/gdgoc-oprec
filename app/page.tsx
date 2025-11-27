@@ -4,7 +4,7 @@ import Recommendation from "@/modules/recommendation";
 
 export default function Home() {
   return (
-    <main className="py-10">
+    <main className="py-20">
       <Hero />
       <ReadingList />
       <Recommendation />
